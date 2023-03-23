@@ -5,12 +5,11 @@ import List from './List'
 import { filter_change, user_change } from './store'
 import { useDispatch } from 'react-redux'
 const Parentlist = () => {
-
-const data = useSelector((val)=>{
-    return val.users.array_for_each_page
-})
 const main_data = useSelector((val)=>{
     return val.users.data
+})
+const data = useSelector((val)=>{
+    return val.users.array_for_each_page
 })
 const filter_user = useSelector((val)=>{
     return val.filter.filter_username
@@ -34,9 +33,6 @@ const status_filter = useSelector((val)=>{
 const verify = useSelector((val)=>{
     return val.filter.verify_filter
 })
-const error_check = useSelector((val)=>{
-    return val.users.error
-})
 
 const dispatch = useDispatch()
 
@@ -47,8 +43,8 @@ if(filter_user.length === 0 && filter_date.length === 0 && filter_email.length =
 else{
     dispatch(filter_change.verify(false))
 }
-},[filter_user,filter_date,filter_phone,filter_email,organization_filter,status_filter])
-if(verify && error_check){
+},[filter_user,filter_date,filter_phone,filter_email,organization_filter,status_filter,dispatch])
+if(verify){
     return(
       <>
       {
@@ -62,15 +58,19 @@ if(verify && error_check){
       </>
     )
   }
-  else if (!verify && error_check){
+  else {
     return(
         <>{
-            data.map((val,key)=>{
+            
+            main_data.map((val,key)=>{
                 if(filter_user === val.userName || filter_date === val.createdAt.slice(0,10) || filter_email=== val.email || organization_filter === val.orgName || filter_phone === val.phoneNumber ||status_filter === val.education.employmentStatus){
                     dispatch(user_change.check_error(false))
                     return(
-                        <List value={val} key={key}/>
+                        <List value={val} index={key}/>
                     )
+                }
+                else{
+                    return null
                 }
             })
 
@@ -79,15 +79,6 @@ if(verify && error_check){
 
     )
 
-  }
-  else if(verify === false || verify === true && !error_check){
-    return(
-        <>
-            <li className='error_head'>Cant't Find What you looking for ?</li>
-            <li>Try These Out</li>
-            <li>hmm</li>
-        </>
-    )
   }
 
 }

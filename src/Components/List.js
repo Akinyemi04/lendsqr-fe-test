@@ -1,5 +1,5 @@
 import example from './images/example.png'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import nav from './images/eye.png'
@@ -14,11 +14,14 @@ const List = ({value,index}) => {
   const data = useSelector((val)=>{
     return val.users.data
   })
+  const verify = useSelector((val)=>{
+    return val.filter.verify_filter
+})
   let nexxt = null
 
   // status_picker:['Inactive','Pending','Blacklisted','Active'],
-  const element = document.getElementById(`import${index}`)
   useEffect(()=>{
+    const element = document.getElementById(`import${index}`)
     if (data.length>0 && element !==null){
       if(element.innerText === 'Inactive'){
         
@@ -44,7 +47,7 @@ const List = ({value,index}) => {
     
       }
     }
-  },[element,number])
+  },[number,])
 function display(e){
   const element = e.target
   const next = element.nextElementSibling

@@ -1,14 +1,12 @@
 import './All_user.css'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-// import { NavLink } from 'react-router-dom';
 import { login_change, user_change } from './store';
 import icon_1 from './images/icon1.png'
 import icon_2 from './images/icon2.png'
 import icon_3 from './images/icon3.png'
 import icon_4 from './images/icon4.png'
 import Pagination from './Pagination';
-import List from './List';
 import filter from './images/filter.png'
 import arrow_down from './images/arrow-down.png'
 import calender from './images/calender.png'
@@ -63,7 +61,7 @@ const All_user_display = () => {
       element.style.border='none'
     }
    
-  },[main_data,firstpstindex,lastpostindex],element)
+  },[main_data,firstpstindex,lastpostindex],element,dispatch)
 
 
   function toggle_filter(){
@@ -133,6 +131,21 @@ const All_user_display = () => {
           <p className='Big_text'>102,453</p>
         </div>
       </article>
+      {
+        data.length === 0 &&
+        <div className="centerx">
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+        </div>
+      }
       { data.length > 0 &&
           <ul>
               <li className='head'>

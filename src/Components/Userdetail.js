@@ -4,30 +4,14 @@ import './Userdetail.css'
 import KeyboardBackspaceOutlinedIcon from '@mui/icons-material/KeyboardBackspaceOutlined';
 import StarOutlineIcon from '@mui/icons-material/StarOutline';
 import StarRateIcon from '@mui/icons-material/StarRate';
-import { useDispatch } from 'react-redux';
-import { login_change } from './store';
-import { useEffect  } from 'react';
-import { useNavigate } from 'react-router-dom';
+
 
 const Userdetail = () => {
-    const dispatch = useDispatch()
-    const email = useSelector((val)=>{
-        return val.login.Email
-      })
-      const password = useSelector((val)=>{
-        return val.login.password
-      })
-      const navigate = useNavigate()
+
     const data = useSelector((val)=>{
         return val.login.user
     })
-    // useEffect(()=>{
-    //     dispatch(login_change.change_footer_state(true))
-    //     if ( email.indexOf('mail.com') === -1 && password.length === 0){
-    //         navigate('/')
-    //       }
-    // },[])
-    console.log(data)
+
   return (
     <>
         {

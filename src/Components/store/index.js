@@ -126,7 +126,6 @@ const userSlice = createSlice({
             }
         },
         change_current_page(state,action){
-            console.log(typeof(action.payload))
             return{
                 ...state,
                 currentpage:action.payload

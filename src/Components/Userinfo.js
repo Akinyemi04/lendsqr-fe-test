@@ -20,7 +20,7 @@ const User_info = () => {
     .catch((err)=>{
       console.log(err)
     })
-  },[])
+  },[dispatch,id])
   return (
     <div className='user_info'>
       <Header/>
