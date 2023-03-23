@@ -47,7 +47,7 @@ const All_user_display = () => {
       console.log(err)
     })
     dispatch(login_change.change_footer_state(false))
-  },[])
+  },[dispatch,data.lengt])
   const element = document.getElementById(`${lastpostindex -1}`)
 
   useEffect(()=>{

@@ -14,9 +14,6 @@ const List = ({value,index}) => {
   const data = useSelector((val)=>{
     return val.users.data
   })
-  const verify = useSelector((val)=>{
-    return val.filter.verify_filter
-})
   let nexxt = null
 
   // status_picker:['Inactive','Pending','Blacklisted','Active'],
@@ -47,7 +44,7 @@ const List = ({value,index}) => {
     
       }
     }
-  },[number,])
+  },[number,data.length,index])
 function display(e){
   const element = e.target
   const next = element.nextElementSibling

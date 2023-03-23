@@ -93,6 +93,9 @@ const Pagination = ({lastpost}) => {
                                 } onClick={()=>{setCurrentPage(val)}} key={index}>{val}</span>
                             )
                         }
+                        else{
+                            return null
+                        }
            
                     })
                 }

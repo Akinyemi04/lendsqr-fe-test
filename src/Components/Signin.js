@@ -25,7 +25,7 @@ const Signin = () => {
   useEffect(()=>{
     dispatch(login_change.update_email(''))
     dispatch(login_change.update_password(''))
-  },[])
+  },[dispatch])
 
   function Toggle_password(){
     const password = document.getElementById('password')
@@ -41,7 +41,7 @@ const Signin = () => {
 
   function submit(e){
     e.preventDefault()
-    if ( email.indexOf('mail.com') !== -1 && password.length !== 0){
+    if ( email.indexOf('.com') !== -1 && password.length !== 0){
         navigate('/home')
     }
     else if (email.indexOf('mail.com') !== -1 && password.length === 0){
