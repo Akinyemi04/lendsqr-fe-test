@@ -1,0 +1,150 @@
+*{
+  padding: 0 0;
+  margin: 0 0;
+  box-sizing: border-box;
+}
+body{
+  width: 100vw;
+  overflow-x: hidden;
+}
+.log_in{
+  // background-color: rgb(242, 238, 238);
+  background: linear-gradient(to right,white 41%,rgb(230, 232, 235,0.6));
+  height: 100vh;
+  overflow-y: hidden;
+  display: flex;
+  section{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    padding: 7vh 6vw;
+    .img{
+      object-fit: contain;
+      width:130px;
+    }
+    .bg_image{
+      width: 37vw;
+      height: 500px;
+      object-fit: contain;
+      transform: translate(-2vw,-4vh);
+      margin-top: 4.5vh;
+    }
+  }
+  
+  form{
+    height: 100vh;
+    padding: 15vh 8.5vw;
+    width: 50vw;
+    background-color: white;
+    h1{
+        font-weight: 700;
+        font-size: 40px;
+        color: rgba(33, 63, 125, 1);
+        margin-bottom: 1.5vh;
+    }
+    .info{
+      font-size: medium;
+      font-weight: 400;
+      color: rgba(84, 95, 125, 1);
+      margin-bottom: 6vh;
+    }
+    input{
+      border: 1px solid rgba(84, 95, 125, 0.15) ;
+      padding:0.5vh 1.3vw ;
+      width:30vw;
+      border-radius: 7px;
+      height: 40px;
+      margin-bottom: 3vh;
+      outline: none;
+    }
+    .password{
+      border: 1px solid rgba(84, 95, 125, 0.15);
+      border-radius: 7px;
+      width: 30vw;
+      height: 40px;
+      margin-bottom: 3.5vh;
+      input{
+        border: none;
+        width: 25vw;
+        height: 37px;
+        margin-bottom: 0;
+      }
+      span{
+        color: rgba(57, 205, 204, 1);
+        font-size: 12px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      span:hover{
+        opacity: 0.5;
+      }
+
+    }
+    .forgot_password{
+      color: rgba(57, 205, 204, 1);
+      font-weight: 600;
+      font-size: 12px;
+      span{
+        cursor: pointer;
+      }
+      span:hover{
+        opacity: 0.5;
+      }
+    }
+  }
+  button{
+    margin-top: 6vh;
+    width: 30vw;
+    background-color: rgba(57, 205, 204, 1);
+    color: white;
+    border-radius: 10px;
+    border: 1px solid rgba(57, 205, 204, 1);
+    padding: 10px 0;
+    cursor: pointer;
+    outline: none;
+  }
+  button:hover{
+    opacity: 0.67;
+  }
+}
+@media screen and (max-width:'1152px') {
+  .log_in{
+    section{
+      .bg_image{
+        transform: scale(1.15)  translateY(-3.5vh);
+
+      }
+    }
+  }
+  
+}
+@media screen and (max-width:"761px") {
+  .log_in{
+    form{
+      .password{
+        span{
+          font-size: 10px;
+        }
+      }
+    }
+  }
+  
+}
+@media screen and (max-width:'500px') {
+  .log_in{
+    form{
+      input{
+        width: 34vw;
+      }
+      .password{
+        width: 34vw;
+        span{
+          font-size: 9px;
+        }
+      }
+      h1{
+        font-size: 20px;
+      }
+    }
+  }
+}

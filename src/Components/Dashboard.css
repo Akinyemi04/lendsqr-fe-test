@@ -1,0 +1,99 @@
+.dashboard {
+  width: 17vw;
+  background-color: white;
+  color: rgb(33, 63, 125);
+  font-size: 13px;
+  font-weight: 400;
+}
+.dashboard .parent_one {
+  margin-top: 5vh;
+  white-space: nowrap;
+  padding-left: 2.15vw;
+}
+.dashboard .parent_one img {
+  transform: scale(0.95) translateY(4px);
+  margin-right: 0.65vw;
+}
+.dashboard .parent_one .icon {
+  position: relative;
+  top: 7px;
+  margin-left: 0.22vw;
+}
+.dashboard .parent_two {
+  color: rgb(179, 181, 186);
+  margin-top: 3vh;
+  padding-left: 2.15vw;
+}
+.dashboard .parent_two span {
+  margin-left: 0.7vw;
+}
+.dashboard h5 {
+  padding-left: 2.15vw;
+  color: rgba(33, 63, 125, 0.6);
+  margin-top: 3vh;
+}
+.dashboard ul .important {
+  border-left: 4px solid rgb(57, 205, 204);
+  background-color: rgba(57, 205, 204, 0.2);
+}
+.dashboard ul li {
+  margin-top: 10px;
+  padding: 6px 2.16vw;
+  list-style: none;
+  cursor: pointer;
+  border-left: 4px solid white;
+  transition: background-color 1s ease-in-out, color 1s ease-in-out, border-left 1s ease-in-out;
+}
+.dashboard ul li span {
+  margin-left: 0.67vw;
+  color: rgb(179, 181, 186);
+}
+.dashboard ul li img {
+  transform: scale(0.95) translateY(4px);
+}
+.dashboard ul li:hover {
+  border-left: 4px solid rgb(57, 205, 204);
+  background-color: rgba(57, 205, 204, 0.2);
+}
+.dashboard footer hr {
+  margin-top: 5vh;
+  border: 1px solid rgba(208, 204, 204, 0.45);
+}
+.dashboard footer h5 img {
+  transform: scale(0.95) translateY(4px);
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.dashboard footer h5 span {
+  margin-left: 0.67vw;
+  font-size: 13px;
+}
+.dashboard footer .span {
+  margin-left: 2.16vw;
+  position: relative;
+  top: 3vh;
+}
+
+@media screen and (max-width: 1073px) {
+  .dashboard {
+    width: 19vw;
+  }
+}
+@media screen and (max-width: 935px) {
+  .dashboard {
+    width: 21vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  .dashboard {
+    width: 24vw;
+  }
+  .dashboard .parent_one {
+    white-space: break-spaces;
+  }
+}
+@media screen and (max-width: 500px) {
+  .dashboard .parent_one {
+    white-space: break-spaces;
+  }
+}/*# sourceMappingURL=Dashboard.css.map */

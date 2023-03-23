@@ -1,38 +1,135 @@
-.App {
-  text-align: center;
+* {
+  padding: 0 0;
+  margin: 0 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  width: 100vw;
+  overflow-x: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.log_in {
+  background: linear-gradient(to right, white 41%, rgba(230, 232, 235, 0.6));
+  height: 100vh;
+  overflow-y: hidden;
+  display: flex;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.log_in section {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 50vw;
+  padding: 7vh 6vw;
+}
+.log_in section .img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 130px;
+}
+.log_in section .bg_image {
+  width: 37vw;
+  height: 500px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transform: translate(-2vw, -4vh);
+  margin-top: 4.5vh;
+}
+.log_in form {
+  height: 100vh;
+  padding: 15vh 8.5vw;
+  width: 50vw;
+  background-color: white;
+}
+.log_in form h1 {
+  font-weight: 700;
+  font-size: 40px;
+  color: rgb(33, 63, 125);
+  margin-bottom: 1.5vh;
+}
+.log_in form .info {
+  font-size: medium;
+  font-weight: 400;
+  color: rgb(84, 95, 125);
+  margin-bottom: 6vh;
+}
+.log_in form input {
+  border: 1px solid rgba(84, 95, 125, 0.15);
+  padding: 0.5vh 1.3vw;
+  width: 30vw;
+  border-radius: 7px;
+  height: 40px;
+  margin-bottom: 3vh;
+  outline: none;
+}
+.log_in form .password {
+  border: 1px solid rgba(84, 95, 125, 0.15);
+  border-radius: 7px;
+  width: 30vw;
+  height: 40px;
+  margin-bottom: 3.5vh;
+}
+.log_in form .password input {
+  border: none;
+  width: 25vw;
+  height: 37px;
+  margin-bottom: 0;
+}
+.log_in form .password span {
+  color: rgb(57, 205, 204);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.log_in form .password span:hover {
+  opacity: 0.5;
+}
+.log_in form .forgot_password {
+  color: rgb(57, 205, 204);
+  font-weight: 600;
+  font-size: 12px;
+}
+.log_in form .forgot_password span {
+  cursor: pointer;
+}
+.log_in form .forgot_password span:hover {
+  opacity: 0.5;
+}
+.log_in button {
+  margin-top: 6vh;
+  width: 30vw;
+  background-color: rgb(57, 205, 204);
   color: white;
+  border-radius: 10px;
+  border: 1px solid rgb(57, 205, 204);
+  padding: 10px 0;
+  cursor: pointer;
+  outline: none;
+}
+.log_in button:hover {
+  opacity: 0.67;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media screen and (max-width: 1152px) {
+  .log_in section .bg_image {
+    transform: scale(1.15) translateY(-3.5vh);
   }
 }
+@media screen and (max-width: 761px) {
+  .log_in form .password span {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .log_in form input {
+    width: 34vw;
+  }
+  .log_in form .password {
+    width: 34vw;
+  }
+  .log_in form .password span {
+    font-size: 9px;
+  }
+  .log_in form h1 {
+    font-size: 20px;
+  }
+}/*# sourceMappingURL=App.css.map */

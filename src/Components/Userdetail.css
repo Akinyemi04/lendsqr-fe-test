@@ -1,0 +1,212 @@
+.details {
+  padding: 6.5vh 5vw;
+  flex-grow: 1;
+  background-color: rgba(227, 228, 230, 0.1);
+}
+.details main {
+  background-color: white;
+  margin-top: 4vh;
+  color: rgba(33, 63, 125, 0.7);
+  padding: 2.4vh 1.5vw;
+}
+.details main section {
+  margin-top: 5vh;
+  border-bottom: 1px solid rgba(177, 176, 176, 0.5);
+  padding-bottom: 3.5vh;
+}
+.details main section h2 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18.77px;
+  margin-top: 2vh;
+}
+.details main section article {
+  display: flex;
+  flex-wrap: wrap;
+}
+.details main section article div {
+  margin-right: 6vw;
+  margin-top: 4vh;
+}
+.details main section article div p {
+  white-space: nowrap;
+}
+.details main section article div .small {
+  font-size: 12px;
+  font-weight: 400;
+}
+.details main section article div .big {
+  font-size: 16px;
+  margin-top: 9px;
+  font-weight: 500;
+}
+.details .important {
+  background-color: white;
+  margin-top: 4vh;
+  padding-top: 2vh;
+  padding-left: 2.2vw;
+  color: rgb(33, 63, 125);
+}
+.details .important .documentation {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 3.5vh;
+  margin-top: 6vh;
+  font-size: 16px;
+  font-weight: 400;
+}
+.details .important .documentation .main_span {
+  color: rgb(57, 205, 204);
+  border-bottom: 2px solid rgb(57, 205, 204);
+}
+.details .important .documentation span {
+  padding: 1.4vh 2vw;
+  cursor: pointer;
+  transition: color 0.5s ease-in, border-bottom 0.5s ease-in;
+}
+.details .important .documentation span:hover {
+  color: rgb(57, 205, 204);
+  border-bottom: 2px solid rgb(57, 205, 204);
+}
+.details .important article {
+  display: flex;
+}
+.details .important article img {
+  border-radius: 50%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 65px;
+  height: 65px;
+}
+.details .important article section {
+  display: inline-block;
+  padding: 0 2vw;
+  border-right: 1px solid rgba(84, 95, 125, 0.3);
+}
+.details .important article section .big_text {
+  font-weight: 500;
+  font-size: 22px;
+}
+.details .important article section .small_text {
+  font-size: 14px;
+  margin-top: 0.5vh;
+  font-weight: 500;
+  color: rgba(33, 63, 125, 0.6);
+}
+.details .important article section .strong {
+  font-weight: 600;
+}
+.details .important article section .parent_star {
+  font-weight: 500;
+  font-size: 13px;
+}
+.details .important article section .icon {
+  color: rgb(233, 178, 0);
+  transform: translateX(-10px);
+  white-space: nowrap;
+  margin-top: 1.4vh;
+}
+.details .important article section .icon span {
+  transform: scale(0.7);
+  margin-left: 5px;
+}
+.details .important article .last {
+  border: none;
+}
+.details .head .link {
+  text-decoration: none;
+  color: rgb(84, 95, 125);
+}
+.details .head .link .icon {
+  position: relative;
+  margin-right: 0.65vw;
+  top: 5px;
+}
+.details .head .link:hover {
+  opacity: 0.65;
+}
+.details .head h2 {
+  margin-top: 2.75vh;
+}
+.details .head h2 .user {
+  font-size: 23px;
+  color: rgb(33, 63, 125);
+  font-weight: 500;
+  cursor: pointer;
+}
+.details .head h2 .blacklist {
+  color: rgb(228, 3, 59);
+  float: right;
+  border: 1px solid rgb(228, 3, 59);
+  border-radius: 5px;
+  padding: 3px 9px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.details .head h2 .blacklist:hover {
+  opacity: 0.65;
+}
+.details .head h2 .activate {
+  float: right;
+  font-size: 14px;
+  color: rgb(57, 205, 204);
+  margin-right: 3vw;
+  border: 1px solid rgb(57, 205, 204);
+  border-radius: 5px;
+  padding: 3px 9px;
+  cursor: pointer;
+}
+.details .head h2 .activate:hover {
+  opacity: 0.65;
+}
+
+@media screen and (max-width: 750px) {
+  .details .important .documentation span {
+    font-size: 13px;
+  }
+  .details .head h2 {
+    white-space: wrap;
+  }
+}
+@media screen and (max-width: 613px) {
+  .details .important article img {
+    width: 40px;
+    height: 40px;
+  }
+  .details .important article section .big_text {
+    font-size: 15px;
+  }
+  .details .important article section .small_text {
+    font-size: 10px;
+  }
+  .details .head h2 .activate, .details .head h2 .blacklist {
+    font-size: 10px;
+  }
+  .details .head h2 .user {
+    font-size: 18px;
+  }
+  .details .head h2 .blacklist {
+    margin-right: 9vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  .details {
+    width: 76vw;
+    overflow-x: scroll;
+  }
+  .details .head h2 {
+    width: 100vw;
+  }
+  .details .head h2 .activate, .details .head h2 .blacklist {
+    margin-top: 1.5vh;
+  }
+  .details .important {
+    width: 100vw;
+  }
+  .details main {
+    width: 100vw;
+  }
+  .details::-webkit-scrollbar {
+    display: none;
+  }
+}/*# sourceMappingURL=Userdetail.css.map */

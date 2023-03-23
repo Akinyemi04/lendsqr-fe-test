@@ -1,0 +1,224 @@
+import { configureStore,createSlice } from "@reduxjs/toolkit";
+
+const LoginSlice = createSlice({
+    name:'Data',
+    initialState:{
+        Email:'',
+        password:'',
+        button:'SHOW',
+        email_placeholder:'Email',
+        user:null,
+        display_footer:false
+
+    },
+    reducers:{
+        update_password(state,action){
+            return{
+                ...state,
+                password:action.payload
+            }
+        },
+        update_email(state,action){
+            return{
+                ...state,
+                Email:action.payload
+            }
+        },
+        change_password_display(state,action){
+            return{
+                ...state,
+                button:action.payload
+            }
+        },
+        change_placeholder(state,action){
+            return{
+                ...state,
+                email_placeholder:action.payload
+            }
+        },
+        change_user(state,action){
+            return{
+                ...state,
+                user:action.payload
+            }
+        },
+        change_footer_state(state,action){
+            return{
+                ...state,
+                display_footer:action.payload
+            }
+        }
+    }
+})
+
+const userSlice = createSlice({
+    name:'users',
+    initialState:{
+        data:'',
+        currentpage:1,
+        postperpage :8,
+        array_for_each_page: [],
+        pages:[],
+        status_picker:['Inactive','Pending','Blacklisted','Active'],
+        max_number_page:3,
+        min_number_page:0,
+        dummy_display:null,
+        pagination_visibility:'visible',
+        error:true
+    },
+    reducers:{
+        check_error(state,action){
+            return{
+                ...state,
+                error:action.payload
+            }
+        }
+        ,
+        change_pagination(state,action){
+            return{
+                ...state,
+                pagination_visibility:action.payload
+            }
+        }
+        ,
+        change_dummy(state){
+            return{
+                ...state
+            }
+        }
+        ,
+        set_max_number_page(state,action){
+            return{
+                ...state,
+                max_number_page:action.payload
+            }
+        },
+        set_min_number_page(state,action){
+            return{
+                ...state,
+                min_number_page:action.payload
+            }
+        }
+        ,
+        change_data(state,action){
+            return{
+                ...state,
+                data:action.payload
+            }
+        },
+        change_array_page(state,action){
+            return{
+                ...state,
+                array_for_each_page:state.data.slice(action.payload.firstpost,action.payload.lastpost)
+            }
+        },
+        push_page(state,action){
+            if(state.pages.length < (state.data.length/state.postperpage)){
+                return{
+                    ...state,
+                    pages:[...state.pages,action.payload]
+                }
+            }
+            else{
+                return{
+                    ...state
+                }
+            }
+        },
+        change_current_page(state,action){
+            console.log(typeof(action.payload))
+            return{
+                ...state,
+                currentpage:action.payload
+            }
+        }
+    }
+})
+
+const filterSlice = createSlice({
+    name:'filter',
+    initialState:{
+        filter_status:'',
+        filter_date:'',
+        filter_phone:'',
+        filter_organization:'',
+        filter_email:'',
+        filter_username:'',
+        organization_list:[],
+        status_list:[],
+        verify_filter: false
+    },
+    reducers:{
+        verify(state,action){
+            return{
+                ...state,
+                verify_filter:action.payload
+            }
+        }
+        ,
+        reset(state){
+            return{
+                ...state,
+                filter_date:'',
+                filter_email:'',
+                filter_organization:'',
+                filter_phone:'',
+                filter_status:'',
+                filter_username:''
+            }
+        }
+        ,
+        change_organization(state,action){
+            return{
+                ...state,
+                organization_list:action.payload
+            }
+        },
+        change_status(state,action){
+            return{
+                ...state,
+                status_list:action.payload
+            }
+        }
+        ,
+        change_filter_email(state,action){
+            return{
+                ...state,
+                filter_email:action.payload
+            }
+        },
+        change_filter_username(state,action){
+            return{
+                ...state,
+                filter_username:action.payload
+            }
+        },
+        change_filter_date(state,action){
+            return{
+                ...state,
+                filter_date:action.payload
+            }
+        }
+        ,
+        change_filter_phone(state,action){
+            return{
+                ...state,
+                filter_phone:action.payload
+            }
+        }
+
+    }
+})
+export const login_change = LoginSlice.actions
+export const user_change = userSlice.actions
+export const filter_change = filterSlice.actions
+
+const store = configureStore({
+    reducer:{
+        login:LoginSlice.reducer,
+        users:userSlice.reducer,
+        filter:filterSlice.reducer
+    }
+})
+
+export default store;
