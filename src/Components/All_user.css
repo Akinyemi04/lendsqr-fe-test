@@ -357,6 +357,9 @@ footer aside img:hover {
   .all_users ul {
     width: 147vw;
   }
+  .all_users ul .absolute input {
+    font-size: 16px;
+  }
   .all_users ul li .organization {
     width: 22vw;
   }

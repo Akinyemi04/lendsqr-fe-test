@@ -366,6 +366,11 @@ footer{
         ul{
 
             width: 147vw;
+            .absolute{
+                input{
+                    font-size: 16px;
+                }
+            }
             li{
                 .organization{
                 width: 22vw;
