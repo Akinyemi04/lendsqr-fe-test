@@ -240,7 +240,7 @@
 }
 .all_users ul li .date {
   margin-left: 1.5vw;
-  width: 8vw;
+  width: 10vw;
   margin-right: 1.5vw;
 }
 .all_users ul li .status {
@@ -355,13 +355,13 @@ footer aside img:hover {
     width: 3px;
   }
   .all_users ul {
-    width: 125vw;
+    width: 147vw;
   }
   .all_users ul li .organization {
     width: 22vw;
   }
   .all_users ul li .user {
-    width: 14vw;
+    width: 20vw;
   }
   .all_users ul li .email {
     width: 30vw;
@@ -371,15 +371,17 @@ footer aside img:hover {
   }
   .all_users ul li .date {
     width: 14vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
   }
   .all_users ul li .status {
-    width: 16vw;
+    width: 23vw;
   }
   .all_users .articulate {
-    width: 130vw;
+    width: 150vw;
   }
   .all_users .articulate div {
-    width: 25vw;
+    width: 32vw;
   }
   .all_users::-webkit-scrollbar {
     display: none;

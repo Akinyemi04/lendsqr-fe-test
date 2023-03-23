@@ -239,7 +239,7 @@ ul{
         }
         .date{
             margin-left: 1.5vw;
-            width: 8vw;
+            width: 10vw;
             margin-right: 1.5vw;
         }
         .status{
@@ -365,13 +365,13 @@ footer{
         }
         ul{
 
-            width: 125vw;
+            width: 147vw;
             li{
                 .organization{
                 width: 22vw;
                 }
                 .user{
-                    width: 14vw;
+                    width: 20vw;
                 }
                 .email{
                     width: 30vw;
@@ -381,16 +381,18 @@ footer{
                 }
                 .date{
                     width: 14vw;
+                    margin-left: 3vw;
+                    margin-right: 3vw;
                 }
                 .status{
-                    width: 16vw;
+                    width: 23vw;
                 }
             }
         }
         .articulate{
-            width: 130vw;
+            width: 150vw;
             div{
-                width: 25vw;
+                width: 32vw;
             }
         }
     }

@@ -92,8 +92,12 @@ header aside .user .arrow {
   header {
     position: relative;
   }
+  header .search {
+    z-index: 1;
+    white-space: nowrap;
+  }
   header aside {
-    margin-left: 18vw;
+    margin-left: 26vw;
     font-size: 10px;
   }
   header aside .user {

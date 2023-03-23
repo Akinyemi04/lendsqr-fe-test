@@ -94,8 +94,12 @@ header{
 @media screen and (max-width:"500px") {
     header{
         position: relative;
+        .search{
+            z-index: 1;
+            white-space: nowrap;
+        }
         aside{
-            margin-left: 18vw;
+            margin-left: 26vw;
             font-size: 10px;
             .user{
                 position: absolute;

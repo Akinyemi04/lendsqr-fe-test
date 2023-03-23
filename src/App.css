@@ -122,6 +122,7 @@ body {
 @media screen and (max-width: 500px) {
   .log_in form input {
     width: 34vw;
+    font-size: 16px;
   }
   .log_in form .password {
     width: 34vw;
