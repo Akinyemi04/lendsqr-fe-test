@@ -96,6 +96,9 @@ header aside .user .arrow {
     z-index: 1;
     white-space: nowrap;
   }
+  header .search input {
+    font-size: 16px;
+  }
   header aside {
     margin-left: 26vw;
     font-size: 10px;
