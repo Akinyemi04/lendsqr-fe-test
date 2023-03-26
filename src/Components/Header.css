@@ -29,11 +29,16 @@ header .search input {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   padding-left: 10px;
-  color: rgba(84, 95, 125, 0.4);
   outline: none;
   border: 1px solid rgba(33, 63, 125, 0.1);
   border-right: 1px solid white;
   transform: translateY(-1px);
+}
+header .search input::-moz-placeholder {
+  color: rgba(84, 95, 125, 0.4);
+}
+header .search input::placeholder {
+  color: rgba(84, 95, 125, 0.4);
 }
 header .search .search_icon {
   position: absolute;
@@ -46,6 +51,9 @@ header .search .search_icon {
   padding: 2px 6px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+header .search .search_icon:hover {
+  opacity: 0.5;
 }
 header aside {
   margin-left: 28vw;
@@ -97,6 +105,9 @@ header aside .user .arrow {
   header {
     position: relative;
   }
+  header .logo {
+    width: 15vw;
+  }
   header .search {
     z-index: 1;
     white-space: nowrap;
@@ -104,8 +115,16 @@ header aside .user .arrow {
   header .search input {
     font-size: 16px;
   }
+  header .search input::-moz-placeholder {
+    font-size: 8px;
+    width: 23.5vw;
+  }
+  header .search input::placeholder {
+    font-size: 8px;
+    width: 23.5vw;
+  }
   header aside {
-    margin-left: 26vw;
+    margin-left: 20vw;
     font-size: 10px;
   }
   header aside .user {

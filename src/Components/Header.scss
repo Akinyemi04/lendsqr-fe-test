@@ -46,6 +46,9 @@ header{
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
         }
+        .search_icon:hover{
+            opacity: 0.5;
+        }
     }
     aside{
         margin-left: 28vw;
@@ -103,15 +106,22 @@ header{
 @media screen and (max-width:"500px") {
     header{
         position: relative;
+        .logo{
+            width: 15vw;
+        }
         .search{
             z-index: 1;
             white-space: nowrap;
             input{
                 font-size: 16px;
             }
+            input::placeholder{
+                font-size: 8px;
+                width: 23.5vw;
+            }
         }
         aside{
-            margin-left: 26vw;
+            margin-left: 20vw;
             font-size: 10px;
             .user{
                 position: absolute;
