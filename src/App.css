@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Epilogue:wght@100&family=Lato:ital,wght@0,400;0,700;0,900;1,700&family=League+Spartan:wght@500;700;800&family=Public+Sans:ital,wght@0,300;0,700;1,400&family=Ubuntu:wght@400;500;700&family=Work+Sans:wght@300;400;500;600;700;800;900&display=swap");
 * {
   padding: 0 0;
   margin: 0 0;
@@ -7,6 +8,7 @@
 body {
   width: 100vw;
   overflow-x: hidden;
+  font-family: "Work Sans", "san";
 }
 
 .log_in {
@@ -56,10 +58,16 @@ body {
   border: 1px solid rgba(84, 95, 125, 0.15);
   padding: 0.5vh 1.3vw;
   width: 30vw;
-  border-radius: 7px;
+  border-radius: 5px;
   height: 40px;
   margin-bottom: 3vh;
   outline: none;
+}
+.log_in form input::-moz-placeholder {
+  color: rgba(84, 95, 125, 0.5);
+}
+.log_in form input::placeholder {
+  color: rgba(84, 95, 125, 0.5);
 }
 .log_in form .password {
   border: 1px solid rgba(84, 95, 125, 0.15);

@@ -1,9 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Epilogue:wght@100&family=Lato:ital,wght@0,400;0,700;0,900;1,700&family=League+Spartan:wght@500;700;800&family=Public+Sans:ital,wght@0,300;0,700;1,400&family=Roboto&family=Ubuntu:wght@400;500;700&family=Work+Sans:wght@300;400;500;600;700;800;900&display=swap");
 header {
   display: flex;
   padding: 2.5vh 3vw;
   align-items: center;
   background-color: white;
-  box-shadow: 9px 9px 7px rgba(0, 0, 0, 0.05);
+  box-shadow: 9px 9px 7px rgba(0, 0, 0, 0.04);
   z-index: 1;
   position: relative;
 }
@@ -28,8 +29,9 @@ header .search input {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   padding-left: 10px;
+  color: rgba(84, 95, 125, 0.4);
   outline: none;
-  border: 1px solid rgb(33, 63, 125);
+  border: 1px solid rgba(33, 63, 125, 0.1);
   border-right: 1px solid white;
   transform: translateY(-1px);
 }
@@ -58,6 +60,8 @@ header aside span {
 }
 header aside .doc {
   text-decoration: underline;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 header aside img {
   -o-object-fit: contain;
@@ -67,6 +71,7 @@ header aside img {
 header aside .user {
   margin-left: 1.5vw;
   white-space: nowrap;
+  font-weight: 500;
 }
 header aside .user span {
   margin: 0;

@@ -18,7 +18,9 @@
   background-color: white;
   width: 15.4vw;
   margin-right: auto;
-  box-shadow: 9px 9px 7px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 9px 9px 7px rgba(0, 0, 0, 0.04);
 }
 .all_users .articulate div img {
   -o-object-fit: contain;
@@ -251,8 +253,7 @@
   font-size: 14px;
   font-weight: 400;
   text-align: center;
-  padding-left: 5px;
-  padding-top: 3px;
+  padding-top: 6px;
   border-radius: 15px;
 }
 .all_users ul .head {
