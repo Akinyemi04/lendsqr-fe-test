@@ -46,7 +46,7 @@ const Signin = () => {
     }
     else if (email.indexOf('mail.com') !== -1 && password.length === 0){
       const password = document.getElementsByClassName('password')
-      password[0].style.border = '1px solid red'
+      password[0].style.border = '1px solid rgba(242, 130, 128,0.4)'
       setTimeout(()=>{
         password[0].style.border = '1px solid rgba(84, 95, 125, 0.15)'
       },3000)
@@ -54,8 +54,8 @@ const Signin = () => {
     else{
       dispatch(login_change.update_email(''))
       const email = document.getElementById('email')
-      email.style.border = '1px solid red'
-      dispatch(login_change.change_placeholder('Invalid Email'))
+      email.style.border = '1px solid rgba(242, 130, 128,0.4)'
+      dispatch(login_change.change_placeholder('invalid Email'))
       setTimeout(()=>{
         email.style.border= '1px solid rgba(84, 95, 125, 0.15)'
         dispatch(login_change.change_placeholder('Email'))
