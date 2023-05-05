@@ -3,6 +3,7 @@
     background-color: white;
     color: rgba(33, 63, 125, 1);
     font-size: 13px;
+    padding-bottom: 10px ;
     font-weight: 400;
     .parent_one{
         margin-top: 5vh;
@@ -97,12 +98,13 @@
         .parent_one{
             white-space: break-spaces;
         }
-        width: 24vw;
+        width: 26vw;
     }
     
 }
 @media screen and (max-width:'500px') {
     .dashboard{
+        width: 120px;
         .parent_one{
             white-space:break-spaces ;
         }

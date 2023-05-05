@@ -107,26 +107,44 @@ header{
     header{
         position: relative;
         .logo{
-            width: 15vw;
+            position: absolute;
+            width: 100px;
+            top: 26px;
         }
         .search{
             z-index: 1;
             white-space: nowrap;
+            position: relative;
+            top: 10px;
+            left: 80px;
             input{
                 font-size: 16px;
+                height: 25px;
+                min-width: 80px;
+                padding-left: 6px;
+                width:22vw ;
             }
             input::placeholder{
                 font-size: 8px;
                 width: 23.5vw;
             }
+            .search_icon{
+                padding: 2px;
+                height: 25px;
+                .MuiSvgIcon-root{
+                    transform: scale(0.7);
+                }
+            }
         }
         aside{
             margin-left: 20vw;
             font-size: 10px;
+            position: absolute;
+            right:10px;
             .user{
                 position: absolute;
-                bottom: 2vh;
-                right: 10vw;
+                bottom: -6px;
+                right: 10px;
             }
             img{
                 transform: scale(0.6);

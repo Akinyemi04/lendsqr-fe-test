@@ -106,14 +106,23 @@ header aside .user .arrow {
     position: relative;
   }
   header .logo {
-    width: 15vw;
+    position: absolute;
+    width: 100px;
+    top: 26px;
   }
   header .search {
     z-index: 1;
     white-space: nowrap;
+    position: relative;
+    top: 10px;
+    left: 80px;
   }
   header .search input {
     font-size: 16px;
+    height: 25px;
+    min-width: 80px;
+    padding-left: 6px;
+    width: 22vw;
   }
   header .search input::-moz-placeholder {
     font-size: 8px;
@@ -123,14 +132,23 @@ header aside .user .arrow {
     font-size: 8px;
     width: 23.5vw;
   }
+  header .search .search_icon {
+    padding: 2px;
+    height: 25px;
+  }
+  header .search .search_icon .MuiSvgIcon-root {
+    transform: scale(0.7);
+  }
   header aside {
     margin-left: 20vw;
     font-size: 10px;
+    position: absolute;
+    right: 10px;
   }
   header aside .user {
     position: absolute;
-    bottom: 2vh;
-    right: 10vw;
+    bottom: -6px;
+    right: 10px;
   }
   header aside img {
     transform: scale(0.6);
