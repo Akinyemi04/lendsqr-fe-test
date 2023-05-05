@@ -104,9 +104,14 @@
 }
 @media screen and (max-width:'500px') {
     .dashboard{
-        width: 120px;
+        width: 146px;
         .parent_one{
             white-space:break-spaces ;
+        }
+        ul{
+            li{
+                white-space: nowrap;
+            }
         }
     }
     
