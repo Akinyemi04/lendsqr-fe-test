@@ -87,18 +87,15 @@
     }
     
 }
+
 @media screen and (max-width:'935px') {
     .dashboard{
-        width: 21vw;
-    }
-    
-}
-@media screen and (max-width:'800px') {
-    .dashboard{
-        .parent_one{
-            white-space: break-spaces;
+        width: 200px;
+        ul{
+            li{
+                white-space: nowrap;
+            }
         }
-        width: 26vw;
     }
     
 }
@@ -108,11 +105,7 @@
         .parent_one{
             white-space:break-spaces ;
         }
-        ul{
-            li{
-                white-space: nowrap;
-            }
-        }
+
     }
     
 }

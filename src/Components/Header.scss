@@ -11,7 +11,7 @@ header{
     position: relative;
     .logo{
         object-fit: contain;
-        width: 10vw;
+        width: 150px;
     }
     .search{
         margin-left: 10vw;
@@ -51,7 +51,8 @@ header{
         }
     }
     aside{
-        margin-left: 28vw;
+        position: absolute;
+        right: 10px;
         display: flex;
         align-items: center;
         font-size: 15px;
@@ -86,7 +87,6 @@ header{
 @media screen and (max-width:"905px") {
     header{
         aside{
-            margin-left: 25vw;
             font-size: 14px;
         }
     }
@@ -95,8 +95,14 @@ header{
 
 @media screen and (max-width:"745px") {
     header{
+        .logo{
+            width: 130px;
+        }
+        .search{
+            margin-left: 6vw;
+        }
         aside{
-            margin-left: 20vw;
+            margin-left: 15vw;
             font-size: 12px;
         }
     }

@@ -234,6 +234,7 @@
   width: 18vw;
   word-wrap: break-word;
   margin-left: 1.5vw;
+  text-align: center;
   white-space: wrap;
 }
 .all_users ul li .phone {
@@ -332,12 +333,14 @@ footer aside img:hover {
 @media screen and (max-width: 1044px) {
   .all_users {
     padding: 8vh 1.7vw;
+    overflow-x: scroll;
   }
   .all_users ul li {
     font-size: 12px;
   }
   .all_users ul li .status {
     width: 9vw;
+    min-width: 87px;
   }
 }
 @media screen and (max-width: 869px) {

@@ -233,6 +233,7 @@ ul{
             width: 18vw;
             word-wrap: break-word;
             margin-left: 1.5vw;
+            text-align: center;
             white-space: wrap;
         }
         .phone{
@@ -333,11 +334,13 @@ footer{
 @media screen and (max-width: '1044px') {
     .all_users{
         padding: 8vh 1.7vw;
+        overflow-x: scroll;
         ul{
             li{
                 font-size: 12px;
                 .status{
                     width: 9vw;
+                    min-width: 87px;
                 }
             }
         }
@@ -412,4 +415,7 @@ footer{
             margin-bottom: 2vh;
         }
     }
+}
+@media screen and (max-width:'930px') {
+    
 }

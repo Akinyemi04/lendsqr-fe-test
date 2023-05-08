@@ -82,15 +82,10 @@
 }
 @media screen and (max-width: 935px) {
   .dashboard {
-    width: 21vw;
+    width: 200px;
   }
-}
-@media screen and (max-width: 800px) {
-  .dashboard {
-    width: 26vw;
-  }
-  .dashboard .parent_one {
-    white-space: break-spaces;
+  .dashboard ul li {
+    white-space: nowrap;
   }
 }
 @media screen and (max-width: 500px) {
@@ -99,8 +94,5 @@
   }
   .dashboard .parent_one {
     white-space: break-spaces;
-  }
-  .dashboard ul li {
-    white-space: nowrap;
   }
 }/*# sourceMappingURL=Dashboard.css.map */
